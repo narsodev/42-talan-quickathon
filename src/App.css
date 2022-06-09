@@ -34,7 +34,7 @@ main {
 	gap: 2rem;
 }
 
-button {
+.button-scan {
 	border: 0;
 	border-radius: 2rem;
 	background-color: #047495;
@@ -45,7 +45,7 @@ button {
 	transition: transform .3s;
 }
 
-button:hover, button:active {
+.button-scan:hover, .button-scan:active {
 	transform: translateY(.3rem);
 }
 
@@ -82,4 +82,44 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.shop {
+	display: flex;
+	padding: 1rem;
+	gap: .5rem;
+	margin-top: .5rem;
+}
+
+.shop img {
+	height: 8rem;
+	object-fit: cover;
+	margin-bottom: .2rem;
+}
+
+.shop button {
+	border: 0;
+	background-color: transparent;
+	display: block;
+	width: 50%;
+}
+
+article {
+	border: 1px solid #047495;
+	width: 100%;
+}
+
+article svg {
+	width: 2rem;
+}
+
+h3 {
+	text-align: center;
+}
+
+h4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .2rem;
 }
