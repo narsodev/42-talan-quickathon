@@ -72,6 +72,7 @@ function App() {
 					/>
 				}
 			</section>
+			<h2 className='tienda'>Tienda</h2>
 			<section className='shop'>
 				<button onClick={() => handleBuy(20, 'mojito')}>
 					<article>

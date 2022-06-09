@@ -21,7 +21,6 @@ footer {
 
 main {
 	background-color: #f3f5f5;
-	height: 80vh;
 	color: #047495;
 }
 
@@ -122,4 +121,9 @@ h4 {
 	align-items: center;
 	justify-content: center;
 	gap: .2rem;
+}
+
+.tienda {
+	margin-top: 2rem;
+	text-align: center;
 }
