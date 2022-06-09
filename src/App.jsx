@@ -35,6 +35,7 @@ function App() {
 							setCount(Number(count) + Number(result.data.split(":")[1]))
 						else
 							alert('Código no válido')
+						setScan(false)
 					}}
 					onError={error => {
 						console.error(error)
