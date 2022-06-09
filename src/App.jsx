@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import logo from './logo.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 import IconHome from './IconHome'
 import IconLocation from './IconLocation'
@@ -10,6 +9,16 @@ import QrReader from 'react-web-qr-reader'
 function App() {
   const [count, setCount] = useState(0)
   const [scan, setScan] = useState(false)
+
+	useEffect(() => {
+		const localCount = localStorage.getItem('count')
+		if (localCount)
+			setCount(localCount)
+	}, [])
+
+	useEffect(() => {
+		localStorage.setItem('count', count)
+	}, [count])
 
   const handleShowCam = () => {
 	setScan(scan => !scan)
@@ -42,7 +51,7 @@ function App() {
 	const number = Number(price)
 	if (Number.isNaN(Number) || count < number)
 	{
-		alert('Lo siento eres pobre,')
+		alert('Lo siento eres pobre.')
 		return
 	} else {
 		setCount(count - number)
