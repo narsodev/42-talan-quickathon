@@ -27,14 +27,23 @@ function App() {
 				<button onClick={() => setScan(scan => !scan)}>Registrar QR</button>
 				{
 					scan && <QrReader
+					className='qr'
 					onScan={result => {
 						console.log(result)
+						alert(result)
 						setScan(false)
 					}}
 					onError={error => {
 						console.error(error)
+						alert(error)
 						setScan(false)
 					}}
+					style={
+						{
+							height: 240,
+							width: 320
+						}
+					}
 					/>
 				}
 				
