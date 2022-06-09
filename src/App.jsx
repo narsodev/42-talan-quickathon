@@ -42,7 +42,7 @@ function App() {
 	const number = Number(price)
 	if (Number.isNaN(Number) || count < number)
 	{
-		alert('Lo siento eres pobre')
+		alert('Lo siento eres pobre,')
 		return
 	} else {
 		setCount(count - number)
@@ -53,7 +53,7 @@ function App() {
   return (
 	<>
 		<header>
-			<h1>Malaga's Treasure</h1>
+			<h1>Málaga's Treasure</h1>
 			<section className='points'>
 				<span>{count}</span><IconEspeto />
 			</section>
