@@ -29,9 +29,12 @@ function App() {
 					scan && <QrReader
 					className='qr'
 					onScan={result => {
-						console.log(result)
-						alert(result)
-						setScan(false)
+						const { data } = result
+						const number = Number(data.split(":")[1])
+						if (!Number.isNaN(number))
+							setCount(Number(count) + Number(result.data.split(":")[1]))
+						else
+							alert('Código no válido')
 					}}
 					onError={error => {
 						console.error(error)
