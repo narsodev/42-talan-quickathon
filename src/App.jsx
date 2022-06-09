@@ -31,8 +31,10 @@ function App() {
 					onScan={result => {
 						const { data } = result
 						const number = Number(data.split(":")[1])
-						if (!Number.isNaN(number))
+						if (!Number.isNaN(number)) {
 							setCount(Number(count) + Number(result.data.split(":")[1]))
+							alert(`¡Sumados ${number} EspetoCoins!`)
+						}
 						else
 							alert('Código no válido')
 						setScan(false)
