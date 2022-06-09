@@ -51,7 +51,7 @@ function App() {
 	const number = Number(price)
 	if (Number.isNaN(Number) || count < number)
 	{
-		alert('Lo siento eres pobre.')
+		alert('No tienes suficientes espetocoins.')
 		return
 	} else {
 		setCount(count - number)
